@@ -173,14 +173,16 @@ img{
     gap: 1.5rem;
 }
 
-.header{
-    width: 100%;
+.header {
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
-    z-index: var(--z-fixed);
-    background-color: var(--body-color);
-}
+    width: 100%;
+    z-index: 1000; /* ensures it's on top of other content */
+    background-color: #fff; /* or your navbar background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* optional: subtle shadow for visibility */
+  }
+  
 
 /*==================== NAV ====================*/
 .nav
@@ -332,7 +334,7 @@ img{
 }
 
 .home__scroll{
-    /*display: none;*/
+    /* display: none; */
 }
 
 .home__scroll-button{
@@ -532,7 +534,7 @@ img{
 }
 
 .skills__c{
-    width: 40%;
+    width: 35%;
 }
 
 .skills__js{
@@ -552,23 +554,33 @@ img{
 }
 
 .skills__express{
-    width: 85%;
+    width: 70%;
 }
 
 .skills__github{
     width: 85%;
 }
 
-.skills__bootstrap{
-    width: 80%;
+
+.skills__aws{
+    width: 70%;
+}
+.skills__azure{
+    width: 65%;
+}
+.skills__cloudflare{
+    width: 60%;
+}
+.skills__docker{
+    width: 60%;
 }
 
 .skills__mysql{
-    width: 70%;
+    width: 75%;
 }
 
 .skills__mongo{
-    width: 80%;
+    width: 90%;
 }
 
 .skills__postgresql{
@@ -1014,9 +1026,15 @@ img{
     text-align: center; /* Allinea tutto al centro */
 }
 
-.footer__container{
-    row-gap: 3.5rem;
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: center;
 }
+
 
 .footer__bg{
     background-color: var(--first-color-second);
@@ -1031,11 +1049,17 @@ img{
 .footer__subtitle{
     font-size: var(--small-font-size);
 }
-.footer__links{
+.footer__links {
     display: flex;
-    flex-direction: column;
-    row-gap: 1.5rem;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
+
 
 .footer__link:hover{
     color: var(--first-color-lighter);
@@ -1210,10 +1234,16 @@ img{
         margin-bottom: 4rem;
     }
 
-    .header{
+    .header {
+        position: fixed;
         top: 0;
-        bottom: initial;
-    }
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* ensures it's on top of other content */
+        background-color: #fff; /* or your navbar background */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* optional: subtle shadow for visibility */
+      }
+      
     .header,
     .main,
     .footer__container{
